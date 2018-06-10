@@ -1,0 +1,35 @@
+@import "../../assets/stylesheets/variables";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 0 30px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  a {
+    text-decoration: none;
+    color: $text-primary;
+    padding: 0 20px;
+  }
+  .navbar__logo {
+    font-size: 28px;
+    flex-basis: 55px;
+  }
+  .navbar__navigation {
+    display: flex;
+    flex-basis: calc(100% - 55px);
+    justify-content: space-between;
+    .navbar__navigation__navigation-left {
+      display: flex;
+    }
+    .navbar__navigation__navigation-right {
+      display: flex;
+      justify-content: flex-end;
+      li:last-child a {
+        padding-right: 0;
+      }
+    }
+  }
+}

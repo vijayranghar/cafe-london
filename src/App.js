@@ -13,10 +13,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <main className="wrapper">
         <Navbar />
         <Banner />
-      </div>
+      </main>
     )
   }
 }

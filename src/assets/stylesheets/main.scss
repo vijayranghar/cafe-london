@@ -13,7 +13,22 @@
     font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'din_condensedbold';
+  font-family: 'din_condensedbold',Gill Sans, arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 1098px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  list-style-type: none;
 }
