@@ -1,5 +1,5 @@
 .banner {
-  background: url('../../assets/images/bg-pic.png') no-repeat;
+  background: url('../../assets/images/bg-pic.png') no-repeat center;
   background-size: cover;
   height: 768px;
   display: flex;
@@ -11,6 +11,18 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 95px;
+    position: relative;
+    &:before {
+      content: '';
+      background: url('../../assets/images/stamp.png') no-repeat center;
+      display: block;
+      height: 140px;
+      position: absolute;
+      top: -150px;
+      left: -160px;
+      width: 165px;
+      background-size: contain;
+    }
     strong {
       display: block;
       font-size: 115px;
@@ -21,4 +33,40 @@
       line-height: 52px;
     }
   }
+  .banner__info {
+    position: fixed;
+    right: -15px;
+    background: #ffffff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 4px 10px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
 }
+
+.section1 {
+    background: teal;
+    height: 800px;
+  }
+  .section2 {
+    background: aqua;
+    height: 800px;
+  }
+  .section3 {
+    background: gray;
+    height: 800px;
+  }
+  .section4 {
+    background: pink;
+    height: 800px;
+  }
+  .section5 {
+    background: violet;
+    height: 800px;
+  }
+  .section6 {
+    background: teal;
+    height: 800px;
+  }
