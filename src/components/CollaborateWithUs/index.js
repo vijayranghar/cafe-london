@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-class Location extends Component {
+class CollaborateWithUs extends Component {
   render () {
     return (
-      <section className="location">
+      <section className="collaborate-with-us">
         <div className="container">
         </div>
       </section>
@@ -11,4 +11,4 @@ class Location extends Component {
   }
 }
 
-export default Location
+export default CollaborateWithUs
