@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Banner from './components/Banner'
 import Community from './components/Community'
+import CollaborateWithUs from './components/CollaborateWithUs'
 import Footer from './components/Footer'
 import Location from './components/Location'
 import Menu from './components/Menu'
@@ -23,6 +24,7 @@ class App extends Component {
         <Menu />
         <PopularRecipes />
         <Location />
+        <CollaborateWithUs />
         <Footer />
       </main>
     )
