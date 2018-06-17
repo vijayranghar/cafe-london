@@ -9,7 +9,7 @@ class Footer extends Component {
        renderLinks.push(links.map(({title,links},index) => {
         const heading = title
         const footerLinks = links.map((link,index) => (
-          <li><a href="#" key={index}>link</a></li>
+          <li><a href="#" key={index}>{link}</a></li>
         ))
         return (
           <ul>
@@ -31,8 +31,7 @@ class Footer extends Component {
           </div>
           <div className="footer--logos">
             <h2>This is the <strong>logo</strong></h2>
-
-            <img src={require("../../assets/images/social.png")}/>
+            <img src={require("../../assets/images/social.png")} alt="social links" />
           </div>
         </div>
       </footer>
