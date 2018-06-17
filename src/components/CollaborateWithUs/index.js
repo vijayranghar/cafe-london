@@ -5,6 +5,7 @@ class CollaborateWithUs extends Component {
     return (
       <section className="collaborate-with-us">
         <div className="container">
+          <h2>Collaborate with us</h2>
         </div>
       </section>
     )

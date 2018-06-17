@@ -5,6 +5,7 @@ class PopularRecipes extends Component {
     return (
       <section className="popular-recipes">
         <div className="container">
+        <h2>Popular Recipes</h2>
         </div>
       </section>
     )

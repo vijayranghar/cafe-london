@@ -5,6 +5,7 @@ class Location extends Component {
     return (
       <section className="location">
         <div className="container">
+          <h2>Location</h2>
         </div>
       </section>
     )

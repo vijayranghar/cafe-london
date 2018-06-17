@@ -5,6 +5,7 @@ class Menu extends Component {
     return (
       <section className="menu">
         <div className="container">
+          <h2>Our menu</h2>
         </div>
       </section>
     )

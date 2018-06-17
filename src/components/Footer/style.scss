@@ -1,0 +1,30 @@
+@import '../../assets/stylesheets/variables';
+
+.footer {
+  background: $color-mine-shaft;
+  padding: 60px 0 50px;
+  & > .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer--links {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+      list-style-type: none;
+      li {
+        &:first-child {
+          color: $color-tuft-bush;
+          text-transform: uppercase;
+        }
+        a {
+          font-size: 15px;
+          font-family: 'Gill Sans','din_condensedbold',arial;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

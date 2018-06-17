@@ -1,3 +1,5 @@
+@import "./variables";
+
 @font-face {
     font-family: 'Gill Sans';
     src: url('../fonts/GillSans.woff2') format('woff2'),
@@ -20,7 +22,7 @@
 }
 
 body {
-  font-family: 'din_condensedbold',Gill Sans, arial;
+  font-family: 'din_condensedbold','Gill Sans',arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,4 +33,8 @@ body {
 }
 ul {
   list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $color-dove-gray;
 }

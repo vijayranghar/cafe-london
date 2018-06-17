@@ -5,6 +5,7 @@ class Community extends Component {
     return (
       <section className="community">
         <div className="container">
+          <h2>Meet our community</h2>  
         </div>
       </section>
     )
