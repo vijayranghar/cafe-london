@@ -84,17 +84,17 @@ class Menu extends Component {
        const dishCategoryName = category
        const dishesName = dishes.map(({name,description,price}) => {
          return (
-          <div>
-            {name}
-            {description}
-            {price}
-          </div>
+          <li className="menu--item--description">
+            <h4>{name}</h4>
+            <p>{description}</p>
+            <span>{price}</span>
+          </li>
         )
        })
        return (
          <div>
           <h2>{dishCategoryName}</h2>
-          <li>{dishesName}</li>
+          <ul>{dishesName}</ul>
          </div>
        )
     }))
@@ -103,7 +103,9 @@ class Menu extends Component {
         <div className="container">
           <h2>Our menu</h2>
           <span>Know more</span>
-          {renderMenu}
+          <div className="menu--item">
+            {renderMenu}
+          </div>
         </div>
       </section>
     )

@@ -23,13 +23,14 @@ class App extends Component {
           <ProgressTracker sections={sections} />
           <Banner />
           <Community />
-          <Menu />
+
           <PopularRecipes />
           <Location />
+          <Menu />
           <CollaborateWithUs />
           <Footer />
         </main>
-      </ParallaxProvider>  
+      </ParallaxProvider>
     )
   }
 }

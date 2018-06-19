@@ -1,9 +1,52 @@
-.menu--wrapper {
-  display: flex;
-  justify-content: space-between;
+@import "../../assets/stylesheets/variables";
+
+.menu {
+  text-align: center;
+  h2 {
+    font-size: 62px;
+    text-transform: uppercase;
+    position: relative;
+    left: -6px;
+    line-height: 68px;
+    & + span {
+      font-size: 18px;
+      background: $color-tuft-bush;
+      text-transform: uppercase;
+      padding: 5px 15px;
+    }
+  }
   .menu--item {
-    width: 24%;
-    height: 400px;
+    display: flex;
+    text-align: left;
+    & > div {
+      border-right: 1px solid $color-dove-gray;
+      width: 25%;
+      overflow: hidden;
+    }
+    h2 {
+      margin-bottom: 35px;
+    }
+    .menu--item--description {
+      margin-bottom: 45px;
+      padding: 0 35px 0 50px;
+      h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 15px;
+        color: $color-scorpion;
+        font-family: 'Gill Sans','din_condensedbold',arial;
+        line-height: 20px;
+        margin-bottom: 15px;
+      }
+      span {
+        display: inline-block;
+        font-size: 12px;
+        border: 2px solid $color-tuft-bush;
+        padding: 6px 14px;
+      }
+    }
   }
 }
 .custom-class {
