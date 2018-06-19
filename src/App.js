@@ -10,23 +10,26 @@ import Navbar from './components/Navbar'
 import PopularRecipes from './components/PopularRecipes'
 import ProgressTracker from './components/ProgressTracker'
 
+import { ParallaxProvider } from 'react-scroll-parallax'
 import './assets/stylesheets/main.scss'
 
 class App extends Component {
   render() {
     const sections = ['banner','community','location','menu','popular-recipes','collaborate-with-us']
     return (
-      <main className="wrapper">
-        <Navbar />
-        <ProgressTracker sections={sections} />
-        <Banner />
-        <Community />
-        <Menu />
-        <PopularRecipes />
-        <Location />
-        <CollaborateWithUs />
-        <Footer />
-      </main>
+      <ParallaxProvider>
+        <main className="wrapper">
+          <Navbar />
+          <ProgressTracker sections={sections} />
+          <Banner />
+          <Community />
+          <Menu />
+          <PopularRecipes />
+          <Location />
+          <CollaborateWithUs />
+          <Footer />
+        </main>
+      </ParallaxProvider>  
     )
   }
 }

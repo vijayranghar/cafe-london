@@ -70,3 +70,10 @@
     background: teal;
     height: 800px;
   }
+
+
+.banner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}

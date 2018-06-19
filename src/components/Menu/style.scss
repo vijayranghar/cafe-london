@@ -1,0 +1,16 @@
+.menu--wrapper {
+  display: flex;
+  justify-content: space-between;
+  .menu--item {
+    width: 24%;
+    height: 400px;
+  }
+}
+.custom-class {
+  width: 24%;
+  height: 400px;
+  border: 1px solid;
+  .menu--item {
+    width: 100%;
+  }
+}
