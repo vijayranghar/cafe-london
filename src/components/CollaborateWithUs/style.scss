@@ -2,16 +2,49 @@
 
 .collaborate-with-us {
   background: $color-tuft-bush;
-  .collaborate-with-us--form {
-    label {
-      display: block;
+  & > .container {
+    display: flex;
+    flex-wrap: wrap;
+    .collaborate-with-us--info {
+      flex-basis: 50%;
+      h2 {
+        font-size: 35px;
+        text-transform: uppercase;
+        line-height: 52px;
+        strong {
+          display: block;
+          font-size: 62px;
+        }
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        font-family: 'Gill Sans','din_condensedbold',arial;
+        color: $color-scorpion;
+      }
     }
-    input,
-    select {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid;
-      border-radius: none;
+    .collaborate-with-us--form {
+      flex-basis: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      .collaborate-with-us--form--group {
+        flex-basis: 50%;
+        label {
+          display: block;
+        }
+        input,
+        select {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid;
+          border-radius: none;
+        }
+      }
+      button {
+        font-size: 18px;
+        color: $color-tuft-bush;
+        background-color: $color-mine-shaft;
+      }
     }
   }
 }
