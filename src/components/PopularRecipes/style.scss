@@ -1,0 +1,52 @@
+@import "../../assets/stylesheets/variables";
+
+.popular-recipes {
+  .recipe {
+    display: inline-block;
+    width: 240px;
+    .recipe--image {
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 100%;
+      text-transform: uppercase;
+    }
+    &.large {
+      width: 370px;
+      .recipe--image {
+        width: 100%;
+        height: 370px;
+      }
+    }
+    .recipe--serving {
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      padding: 12px;
+      display: inline-block;
+      text-align: center;
+      font-size: 22px;
+      line-height: 25px;
+      .count {
+        font-size: 50px;
+        line-height: 45px;
+      }
+    }
+    h4 {
+      font-size: 22px;
+      line-height: 25px;
+      color: $color-mine-shaft;
+    }
+    h5 {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: $color-scorpion;
+    }
+    p {
+      font-size: 15px;
+      color: $color-scorpion;
+      font-family: 'Gill Sans','din_condensedbold',arial;
+      line-height: 20px;
+    }
+  }
+}

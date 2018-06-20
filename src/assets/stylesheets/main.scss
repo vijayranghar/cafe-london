@@ -38,3 +38,13 @@ a {
   text-decoration: none;
   color: $color-dove-gray;
 }
+.badge {
+  font-size: 18px;
+  background: $color-tuft-bush;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  max-width: 105px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

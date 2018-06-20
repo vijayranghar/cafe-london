@@ -8,6 +8,8 @@ class Community extends Component {
       <section className="community">
         <div className="container">
           <h2>Meet our community</h2>
+          <div className="badge">Know more</div>
+          <p>LOREM IPSUM DOLOR SIT AMET ERNUT TEMPARTERO SERTU PER NABORE EN TORNA ENTALTO</p>
         </div>
       </section>
     )
