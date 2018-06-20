@@ -1,0 +1,29 @@
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet-and-above {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin strikeThroughText($color) {
+  &::before {
+    display: block;
+    position: absolute;
+    height: 8px;
+    background: $color;
+    content: "";
+    z-index: -1;
+    top: calc(50% - 5px);
+    left: -15px;
+    right: -15px;
+  }
+}

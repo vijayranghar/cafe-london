@@ -1,18 +1,27 @@
 @import "../../assets/stylesheets/variables";
+@import "../../assets/stylesheets/mixins";
 
 .menu {
   text-align: center;
+  .container > h2 {
+    z-index: 1;
+    display: inline-block;
+    @include strikeThroughText($color-tuft-bush);
+  }
   h2 {
     font-size: 62px;
     text-transform: uppercase;
     position: relative;
     left: -6px;
     line-height: 68px;
-    & + span {
+    & + div {
       font-size: 18px;
       background: $color-tuft-bush;
       text-transform: uppercase;
       padding: 5px 15px;
+      max-width: 100px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   .menu--item {

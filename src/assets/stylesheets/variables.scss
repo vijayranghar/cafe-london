@@ -1,4 +1,22 @@
 $color-mine-shaft: #333333;
+$color-mine-shaft-light: #3C3C3C;
 $color-tuft-bush: #FFDAC9;
 $color-dove-gray: #707070;
 $color-scorpion: #595959;
+
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet-and-above {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

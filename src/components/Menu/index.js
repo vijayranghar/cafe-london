@@ -102,7 +102,7 @@ class Menu extends Component {
       <section className="menu">
         <div className="container">
           <h2>Our menu</h2>
-          <span>Know more</span>
+          <div>Know more</div>
           <div className="menu--item">
             {renderMenu}
           </div>

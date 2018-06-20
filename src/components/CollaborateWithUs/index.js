@@ -8,7 +8,8 @@ class CollaborateWithUs extends Component {
       <section className="collaborate-with-us">
         <div className="container">
           <div className="collaborate-with-us--info">
-            <h2>Collaborate <strong>with us</strong></h2>
+            <h2>Collaborate</h2>
+            <h3>with us</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>

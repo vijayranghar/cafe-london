@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   padding-top: 15px;
+  z-index: 2;
   a {
     text-decoration: none;
     color: $color-mine-shaft;
