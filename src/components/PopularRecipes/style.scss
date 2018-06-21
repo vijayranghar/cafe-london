@@ -5,34 +5,65 @@
     overflow: hidden;
     .popular-recipes--carousel--container {
       display: flex;
-      transition: transform 150ms ease-in;
+      transition: transform 300ms linear;
     }
-    .recipe--image {
-      width: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 100%;
-      text-transform: uppercase;
+    .btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      .btn-previous,
+      .btn-next {
+        -webkit-appearance: none;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-size: cover;
+        width: 50px;
+        border: none;
+        background: transparent;
+        background-size: cover;
+        height: 20px;
+        outline: none;
+        transition: opacity 300ms linear;
+        &.is-disabled {
+          opacity: 0.2;
+        }
+      }
+      .btn-previous {
+        background-image: url('../../assets/images/back.png');
+        margin-right: 15px;
+      }
+      .btn-next {
+        background-image: url('../../assets/images/next.png')
+      }
     }
-    .recipe-small,
-    .recipe-large {
+  }
+  .recipe {
+    margin-right: 25px;
+    &.small,
+    &.large {
       flex-shrink: 0;
     }
-    .recipe-large {
+    &.large {
       width: 370px;
       .recipe--image {
         width: 100%;
         height: 370px;
       }
     }
-    .recipe-small {
+    &.small {
       width: 240px;
       .recipe--image {
         height: 240px;
       }
     }
+    .recipe--image {
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 100%;
+      text-transform: uppercase;
+    }
     .recipe--serving {
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.3);
       color: #fff;
       padding: 12px;
       display: inline-block;
@@ -44,21 +75,40 @@
         line-height: 45px;
       }
     }
-    h4 {
-      font-size: 22px;
-      line-height: 25px;
-      color: $color-mine-shaft;
+    .recipe--goto-btn {
+      display: block;
+      background: url('../../assets/images/go-btn.png') no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
     }
-    h5 {
+    .recipe--info {
+      box-shadow: 0 0 10px 4px #d1d1d1;
+      h4 {
+        font-size: 22px;
+        line-height: 25px;
+        color: $color-mine-shaft;
+      }
+      h5 {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: $color-scorpion;
+      }
+      p {
+        font-size: 15px;
+        color: $color-scorpion;
+        font-family: 'Gill Sans','din_condensedbold',arial;
+        line-height: 20px;
+      }
+    }
+    .recipe--user-name {
       font-size: 15px;
       text-transform: uppercase;
-      color: $color-scorpion;
-    }
-    p {
-      font-size: 15px;
-      color: $color-scorpion;
-      font-family: 'Gill Sans','din_condensedbold',arial;
-      line-height: 20px;
+      color: $color-mine-shaft;
     }
   }
-}
+  }

@@ -79,29 +79,45 @@ class PopularRecipes extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      activeIndex:0
+      activeIndex:0,
+      btnPreviousIsDisabled: true,
+      btnNextIsDisabled: false,
     }
   }
+
   handlePrevious = () => {
     this.setState({
-      activeIndex: this.state.activeIndex + 1
+      activeIndex: this.state.activeIndex - 1
+    },() => {
+      if(this.state.activeIndex < 1) {
+        this.setState({
+          btnPreviousIsDisabled: true,
+        })
+      }
     })
   }
 
   handleNext = () => {
     this.setState({
-      activeIndex: this.state.activeIndex - 1
+      activeIndex: this.state.activeIndex + 1,
+      btnPreviousIsDisabled: false,
+    },() => {
+      if(this.state.activeIndex > 7) {
+        this.setState({
+          btnNextIsDisabled: true,
+        })
+      }
     })
   }
   render () {
-    const { activeIndex } = this.state
+    const { activeIndex, btnPreviousIsDisabled, btnNextIsDisabled } = this.state
     console.log(activeIndex)
     const containerStyle = {
-      'transform': (activeIndex > 7) ? 'none' : `translateX(${activeIndex*200}px)`
+      'transform': `translateX(-${activeIndex*200}px)`
     }
     const renderRecipe = recipes.map(({size, backgroundImage, serving, difficulty, name, description, chefChoice}, index) => {
       return (
-        <div className={`recipe-${size}`} key={index}>
+        <div className={`recipe ${size}`} key={index}>
           <div className="recipe--image" style={{ 'backgroundImage':`url(${backgroundImage})`}}>
             <div className="recipe--serving">
               <div className="count">
@@ -109,11 +125,16 @@ class PopularRecipes extends Component {
               </div>
                 servings
             </div>
-            <a href="#" className="recipe--info"></a>
+            <a href="#" className="recipe--goto-btn"></a>
           </div>
-          <h5>{difficulty}</h5>
-          <h4>{name}</h4>
-          <p>{description}</p>
+          <div className="recipe--info">
+            <h5>{difficulty}</h5>
+            <h4>{name}</h4>
+            <p>{description}</p>
+          </div>
+          <span className="recipe--user-name">
+            User full name
+          </span>
         </div>
       )
     })
@@ -128,9 +149,11 @@ class PopularRecipes extends Component {
             <div className="popular-recipes--carousel--container" style={containerStyle}>
               {renderRecipe}
             </div>
+            <div className="btn-wrapper">
+              <button className={`btn-previous ${btnPreviousIsDisabled ? 'is-disabled': ''}`} onClick={this.handlePrevious}></button>
+              <button className={`btn-next ${btnNextIsDisabled ? 'is-disabled': ''}`} onClick={this.handleNext}></button>
+            </div>
           </div>
-          <button onClick={this.handlePrevious}>Prev</button>
-          <button onClick={this.handleNext}>Next</button>
         </div>
       </section>
     )
