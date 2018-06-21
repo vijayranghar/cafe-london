@@ -80,11 +80,11 @@ const foodMenu = [
 class Menu extends Component {
   render () {
     let renderMenu = []
-     renderMenu.push(foodMenu.map(({category, dishes}) => {
+     renderMenu.push(foodMenu.map(({category, dishes}, index) => {
        const dishCategoryName = category
-       const dishesName = dishes.map(({name,description,price}) => {
+       const dishesName = dishes.map(({name,description,price},index) => {
          return (
-          <li className="menu--item--description">
+          <li key={index} className="menu--item--description">
             <h4>{name}</h4>
             <p>{description}</p>
             <span>{price}</span>
@@ -92,7 +92,7 @@ class Menu extends Component {
         )
        })
        return (
-         <div>
+         <div key={index}>
           <h2>{dishCategoryName}</h2>
           <ul>{dishesName}</ul>
          </div>

@@ -9,10 +9,10 @@ class Footer extends Component {
        renderLinks.push(links.map(({title,links},index) => {
         const heading = title
         const footerLinks = links.map((link,index) => (
-          <li><a href="#" key={index}>{link}</a></li>
+          <li key={index}><a href="#" key={index}>{link}</a></li>
         ))
         return (
-          <ul>
+          <ul key={index}>
             <li>{`heading ${i}`}</li>
             {footerLinks}
           </ul>
