@@ -111,26 +111,27 @@ class PopularRecipes extends Component {
   }
   render () {
     const { activeIndex, btnPreviousIsDisabled, btnNextIsDisabled } = this.state
-    console.log(activeIndex)
     const containerStyle = {
       'transform': `translateX(-${activeIndex*200}px)`
     }
     const renderRecipe = recipes.map(({size, backgroundImage, serving, difficulty, name, description, chefChoice}, index) => {
       return (
         <div className={`recipe ${size}`} key={index}>
-          <div className="recipe--image" style={{ 'backgroundImage':`url(${backgroundImage})`}}>
-            <div className="recipe--serving">
-              <div className="count">
-                {serving}
+          <div>
+            <div className={`recipe--image ${chefChoice ? "chef-choice": ''}`} style={{ 'backgroundImage':`url(${backgroundImage})`}}>
+              <div className="recipe--serving">
+                <div className="count">
+                  {serving}
+                </div>
+                  servings
               </div>
-                servings
+              <a href="javascript:void(0)" className="recipe--goto-btn"></a>
             </div>
-            <a href="#" className="recipe--goto-btn"></a>
-          </div>
-          <div className="recipe--info">
-            <h5>{difficulty}</h5>
-            <h4>{name}</h4>
-            <p>{description}</p>
+            <div className="recipe--info">
+              <h5>{difficulty}</h5>
+              <h4>{name}</h4>
+              <p>{description}</p>
+            </div>
           </div>
           <span className="recipe--user-name">
             User full name

@@ -25,6 +25,7 @@
         transition: opacity 300ms linear;
         &.is-disabled {
           opacity: 0.2;
+          pointer-events: none
         }
       }
       .btn-previous {
@@ -38,6 +39,10 @@
   }
   .recipe {
     margin-right: 25px;
+    & > div {
+      box-shadow: 0 0 10px 3px #f3f3f3;
+      position: relative;
+    }
     &.small,
     &.large {
       flex-shrink: 0;
@@ -61,6 +66,15 @@
       background-repeat: no-repeat;
       background-position: 100%;
       text-transform: uppercase;
+      &.chef-choice::after {
+        background: url('../../assets/images/chef-stamp.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 110px;
+        width: 110px;
+        z-index: 9999999;
+        top: -48px;
+      }
     }
     .recipe--serving {
       background: rgba(0,0,0,.3);
@@ -87,16 +101,18 @@
       cursor: pointer;
     }
     .recipe--info {
-      box-shadow: 0 0 10px 4px #d1d1d1;
-      h4 {
-        font-size: 22px;
-        line-height: 25px;
-        color: $color-mine-shaft;
-      }
+      padding: 18px 25px;
       h5 {
         font-size: 15px;
         text-transform: uppercase;
         color: $color-scorpion;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: 22px;
+        line-height: 25px;
+        color: $color-mine-shaft;
+        margin-bottom: 10px;
       }
       p {
         font-size: 15px;
@@ -109,6 +125,9 @@
       font-size: 15px;
       text-transform: uppercase;
       color: $color-mine-shaft;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
     }
   }
-  }
+}
