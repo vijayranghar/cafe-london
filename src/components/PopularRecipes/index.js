@@ -102,7 +102,7 @@ class PopularRecipes extends Component {
       activeIndex: this.state.activeIndex + 1,
       btnPreviousIsDisabled: false,
     },() => {
-      if(this.state.activeIndex > 7) {
+      if(this.state.activeIndex > 5) {
         this.setState({
           btnNextIsDisabled: true,
         })
@@ -142,19 +142,26 @@ class PopularRecipes extends Component {
     return (
       <section className="popular-recipes">
         <div className="container">
-          <h2>Popular Recipes</h2>
-          <div className="badge">See all</div>
-          <h3>Do you want to share your own recipe?</h3>
-          <div className="badge">Send it now</div>
+          <div className="popular-recipes--heading">
+            <div>
+              <h3>Popular</h3>
+              <h2>Recipes</h2>
+              <div className="badge">See all</div>
+            </div>
+            <div>
+              <h3>Do you want to share your own recipe?</h3>
+              <div className="badge">Send it now</div>
+            </div>
+          </div>
           <div className="popular-recipes--carousel">
             <div className="popular-recipes--carousel--container" style={containerStyle}>
               {renderRecipe}
             </div>
-            <div className="btn-wrapper">
-              <button className={`btn-previous ${btnPreviousIsDisabled ? 'is-disabled': ''}`} onClick={this.handlePrevious}></button>
-              <button className={`btn-next ${btnNextIsDisabled ? 'is-disabled': ''}`} onClick={this.handleNext}></button>
-            </div>
           </div>
+        </div>
+        <div className="btn-wrapper">
+          <button className={`btn-previous ${btnPreviousIsDisabled ? 'is-disabled': ''}`} onClick={this.handlePrevious}></button>
+          <button className={`btn-next ${btnNextIsDisabled ? 'is-disabled': ''}`} onClick={this.handleNext}></button>
         </div>
       </section>
     )

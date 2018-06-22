@@ -23,10 +23,9 @@ class App extends Component {
           <ProgressTracker sections={sections} />
           <Banner />
           <Community />
-
-          <PopularRecipes />
           <Location />
           <Menu />
+          <PopularRecipes />
           <CollaborateWithUs />
           <Footer />
         </main>

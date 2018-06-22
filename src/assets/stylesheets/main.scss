@@ -23,7 +23,7 @@
 
 body {
   font-family: 'din_condensedbold','Gill Sans',arial;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .container {
@@ -37,6 +37,9 @@ ul {
 a {
   text-decoration: none;
   color: $color-dove-gray;
+}
+.collaborate-with-us {
+  margin-top: 35px;
 }
 .badge {
   font-size: 18px;

@@ -1,40 +1,43 @@
 @import "../../assets/stylesheets/variables";
+@import "../../assets/stylesheets/mixins";
 
 .popular-recipes {
+  background-color: #fff;
+  padding-top: 80px;
+  .container {
+    max-width: 1220px;
+    margin-right: 0;
+  }
+  .popular-recipes--heading {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1098px;
+    margin: 0 auto 65px;
+    align-items: flex-end;
+    h2 {
+      font-size: 65px;
+      text-transform: uppercase;
+      position: relative;
+      line-height: 52px;
+      @include strikeThroughText($color-tuft-bush);
+      & + .badge {
+        margin: 8px auto 0 0;
+      }
+    }
+    h3 {
+      font-size: 35px;
+      text-transform: uppercase;
+      & + .badge {
+        margin: 8px 0 0 auto;
+      }
+    }
+  }
   .popular-recipes--carousel {
     overflow: hidden;
     .popular-recipes--carousel--container {
       display: flex;
+      transform: translateX(5px);
       transition: transform 300ms linear;
-    }
-    .btn-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      .btn-previous,
-      .btn-next {
-        -webkit-appearance: none;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        background-size: cover;
-        width: 50px;
-        border: none;
-        background: transparent;
-        background-size: cover;
-        height: 20px;
-        outline: none;
-        transition: opacity 300ms linear;
-        &.is-disabled {
-          opacity: 0.2;
-          pointer-events: none
-        }
-      }
-      .btn-previous {
-        background-image: url('../../assets/images/back.png');
-        margin-right: 15px;
-      }
-      .btn-next {
-        background-image: url('../../assets/images/next.png')
-      }
     }
   }
   .recipe {
@@ -53,11 +56,27 @@
         width: 100%;
         height: 370px;
       }
+      .recipe--serving {
+        padding: 20px;
+        .count {
+          font-size: 50px;
+          line-height: 45px;
+        }
+      }
     }
     &.small {
       width: 240px;
       .recipe--image {
         height: 240px;
+      }
+      .recipe--serving {
+        font-size: 15px;
+        padding: 6px 13px;
+        line-height: 1;
+        .count {
+          font-size: 35px;
+          line-height: 45px;
+        }
       }
     }
     .recipe--image {
@@ -102,6 +121,7 @@
     }
     .recipe--info {
       padding: 18px 25px;
+      background: #fff;
       h5 {
         font-size: 15px;
         text-transform: uppercase;
@@ -128,6 +148,38 @@
       display: flex;
       justify-content: flex-end;
       margin-top: 15px;
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1098px;
+    margin-left: auto;
+    margin-right: auto;
+    .btn-previous,
+    .btn-next {
+      -webkit-appearance: none;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-size: cover;
+      width: 50px;
+      border: none;
+      background: transparent;
+      background-size: cover;
+      height: 20px;
+      outline: none;
+      transition: opacity 300ms linear;
+      &.is-disabled {
+        opacity: 0.2;
+        pointer-events: none
+      }
+    }
+    .btn-previous {
+      background-image: url('../../assets/images/back.png');
+      margin-right: 15px;
+    }
+    .btn-next {
+      background-image: url('../../assets/images/next.png')
     }
   }
 }
