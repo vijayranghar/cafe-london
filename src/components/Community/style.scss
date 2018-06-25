@@ -1,8 +1,20 @@
 @import '../../assets/stylesheets/variables';
+@import '../../assets/stylesheets/mixins';
 
 .community {
+  padding-top: 80px;
   h2 {
     font-size: 62px;
     color: $color-mine-shaft;
+    text-transform: uppercase;
+    line-height: .9;
+    &.heading-strikethrough {
+      display: inline-block;
+      position: relative;
+      @include strikeThroughText($color-tuft-bush);
+    }
+    &.badge {
+      margin-left: 0;
+    }
   }
 }
