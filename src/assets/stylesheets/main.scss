@@ -38,6 +38,11 @@ a {
   text-decoration: none;
   color: $color-dove-gray;
 }
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
 .collaborate-with-us {
   margin-top: 35px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import FontAwesome from 'react-fontawesome'
 import './style.scss'
 
 class Community extends Component {
@@ -7,14 +7,15 @@ class Community extends Component {
     return (
       <section className="community">
         <div className="container">
-          <div className="row">
-            <div>
+          <div className="column">
+            <div className="community--tweet">
               <span>@love_food</span>
               <p>
                 Waffle sticks in Copenhagen! 🇩🇰😍
                 Milk chocolate with sprinkles, dark chocolate
                 with coconut and milk chocolate with peanuts!
                 [📷: @foodwithmichel] #lovefood
+                <FontAwesome name="rocket" />
               </p>
             </div>
             <div>
@@ -26,7 +27,7 @@ class Community extends Component {
               </p>
             </div>
           </div>
-          <div className="row">
+          <div className="column">
             <div>
               <h2>Meet our</h2>
               <h2 className="heading-strikethrough">community</h2>
@@ -34,12 +35,12 @@ class Community extends Component {
               <p>LOREM IPSUM DOLOR SIT AMET ERNUT TEMPARTERO SERTU PER NABORE EN TORNA ENTALTO</p>
             </div>
             <div>
-              <img src=""/>
+              <img className="img-responsive" src={require("../../assets/images/burger.jpg")} alt="burger" />
             </div>
           </div>
-          <div className="row">
+          <div className="column">
             <div>
-              <img src=""/>
+              <img className="img-responsive"  src={require("../../assets/images/pizza.jpg")} alt="pizza" />
             </div>
             <div>
               <p>
@@ -49,15 +50,15 @@ class Community extends Component {
                 voluptate velit esse cillum dolore
               </p>
             </div>
-            <div>
+            <div className="community--tweet">
               <span>@buzzfeedfood</span>
               <p>
                 Getting into long weekend mode like 🍤 #pancitpalabok (📷 @jeepneynyc)
               </p>
             </div>
           </div>
-          <div className="row">
-            <div>
+          <div className="column">
+            <div className="community--tweet">
               <span>@buzzfeedfood</span>
               <p>
                 It’s taco Tuesday! These tacos from @jesseszewczyk
@@ -67,7 +68,7 @@ class Community extends Component {
               </p>
             </div>
             <div>
-              <img src=""/>
+              <img className="img-responsive" src={require("../../assets/images/cherries.jpg")} alt="cherries" />
             </div>
           </div>
         </div>

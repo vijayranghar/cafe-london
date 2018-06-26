@@ -3,18 +3,32 @@
 
 .community {
   padding-top: 80px;
-  h2 {
-    font-size: 62px;
-    color: $color-mine-shaft;
-    text-transform: uppercase;
-    line-height: .9;
-    &.heading-strikethrough {
-      display: inline-block;
-      position: relative;
-      @include strikeThroughText($color-tuft-bush);
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .column {
+      flex-basis: calc(25% - 25px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        font-size: 62px;
+        color: $color-mine-shaft;
+        text-transform: uppercase;
+        line-height: .9;
+        &.heading-strikethrough {
+          display: inline-block;
+          position: relative;
+          @include strikeThroughText($color-tuft-bush);
+        }
+        &.badge {
+          margin-left: 0;
+        }
+      }
     }
-    &.badge {
-      margin-left: 0;
+    .community--tweet {
+      box-shadow: 0 0 10px 3px #f3f3f3;
     }
   }
 }
