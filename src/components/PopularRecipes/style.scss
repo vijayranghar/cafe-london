@@ -8,7 +8,7 @@
     max-width: 1220px;
     margin-right: 0;
   }
-  .popular-recipes--heading {
+  .popular-recipes__heading {
     display: flex;
     justify-content: space-between;
     max-width: 1098px;
@@ -32,9 +32,9 @@
       }
     }
   }
-  .popular-recipes--carousel {
+  .popular-recipes__carousel {
     overflow: hidden;
-    .popular-recipes--carousel--container {
+    .popular-recipes__carousel__container {
       display: flex;
       transform: translateX(5px);
       transition: transform 300ms linear;
@@ -52,11 +52,11 @@
     }
     &.large {
       width: 370px;
-      .recipe--image {
+      .recipe__image {
         width: 100%;
         height: 370px;
       }
-      .recipe--serving {
+      .recipe__serving {
         padding: 20px;
         .count {
           font-size: 50px;
@@ -66,10 +66,10 @@
     }
     &.small {
       width: 240px;
-      .recipe--image {
+      .recipe__image {
         height: 240px;
       }
-      .recipe--serving {
+      .recipe__serving {
         font-size: 15px;
         padding: 6px 13px;
         line-height: 1;
@@ -79,7 +79,7 @@
         }
       }
     }
-    .recipe--image {
+    .recipe__image {
       position: relative;
       background-size: cover;
       background-repeat: no-repeat;
@@ -95,7 +95,7 @@
         top: -48px;
       }
     }
-    .recipe--serving {
+    .recipe__serving {
       background: rgba(0,0,0,.3);
       color: #fff;
       padding: 12px;
@@ -108,7 +108,7 @@
         line-height: 45px;
       }
     }
-    .recipe--goto-btn {
+    .recipe__goto-btn {
       display: block;
       background: url('../../assets/images/go-btn.png') no-repeat;
       background-size: cover;
@@ -119,7 +119,7 @@
       width: 60px;
       cursor: pointer;
     }
-    .recipe--info {
+    .recipe__info {
       padding: 18px 25px;
       background: #fff;
       h5 {
@@ -141,7 +141,7 @@
         line-height: 20px;
       }
     }
-    .recipe--user-name {
+    .recipe__user-name {
       font-size: 15px;
       text-transform: uppercase;
       color: $color-mine-shaft;

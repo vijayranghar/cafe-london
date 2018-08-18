@@ -22,14 +22,14 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <div className="container">
-          <div className="footer--links">
+          <div className="footer__links">
             {renderLinks}
             <p>
               2017. Company. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit, sed do eiusmod tempor.
             </p>
           </div>
-          <div className="footer--logos">
+          <div className="footer__logos">
             <h2>This is the <strong>logo</strong></h2>
             <img src={require("../../assets/images/social.png")} alt="social links" />
           </div>

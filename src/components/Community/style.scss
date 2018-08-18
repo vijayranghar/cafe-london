@@ -26,8 +26,24 @@
           margin-left: 0;
         }
       }
+      .community__recipe-image {
+        padding: 15px;
+        box-shadow: 0 0 10px 3px #f3f3f3;
+        position: relative;
+        &::after {
+          content: '';
+          background: url('../../assets/images/instagram-btn.png') no-repeat 100% 100%;
+          background-size: contain;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 55px;
+          width: 55px;
+        }
+      }
     }
-    .community--tweet {
+    .community__tweet {
       box-shadow: 0 0 10px 3px #f3f3f3;
     }
   }

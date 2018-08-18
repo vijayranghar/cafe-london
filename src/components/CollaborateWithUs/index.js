@@ -7,7 +7,7 @@ class CollaborateWithUs extends Component {
     return (
       <section className="collaborate-with-us">
         <div className="container">
-          <div className="collaborate-with-us--info">
+          <div className="collaborate-with-us__info">
             <h2>Collaborate</h2>
             <h3>with us</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -19,24 +19,24 @@ class CollaborateWithUs extends Component {
             in voluptate velit esse cillum dolore
             </p>
           </div>
-          <form className="collaborate-with-us--form">
-            <div className="collaborate-with-us--form--group">
+          <form className="collaborate-with-us__form">
+            <div className="collaborate-with-us__form-group">
               <label>Name</label>
               <input type="text" placeholder="Name" />
             </div>
-            <div className="collaborate-with-us--form--group">
+            <div className="collaborate-with-us__form-group">
               <label>Surname</label>
               <input type="text" placeholder="Surname" />
             </div>
-            <div className="collaborate-with-us--form--group">
+            <div className="collaborate-with-us__form-group">
               <label>Phone</label>
               <input type="tel" placeholder="Phone" />
             </div>
-            <div className="collaborate-with-us--form--group">
+            <div className="collaborate-with-us__form-group">
               <label>Email address</label>
               <input type="email" placeholder="Email" />
             </div>
-            <div className="collaborate-with-us--form--group">
+            <div className="collaborate-with-us__form-group">
               <label>Experience</label>
               <select placeholder="Select">
                 <option value="1">1</option>
@@ -46,7 +46,7 @@ class CollaborateWithUs extends Component {
                 <option value="5">5+</option>
               </select>
             </div>
-            <div className="collaborate-with-us--form--group">
+            <div className="collaborate-with-us__form-group">
               <label>Where did you hear about us?</label>
               <select placeholder="Select">
                 <option value="Magazine">Magazine</option>

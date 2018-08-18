@@ -118,22 +118,22 @@ class PopularRecipes extends Component {
       return (
         <div className={`recipe ${size}`} key={index}>
           <div>
-            <div className={`recipe--image ${chefChoice ? "chef-choice": ''}`} style={{ 'backgroundImage':`url(${backgroundImage})`}}>
-              <div className="recipe--serving">
+            <div className={`recipe__image ${chefChoice ? "chef-choice": ''}`} style={{ 'backgroundImage':`url(${backgroundImage})`}}>
+              <div className="recipe__serving">
                 <div className="count">
                   {serving}
                 </div>
                   servings
               </div>
-              <a href="javascript:void(0)" className="recipe--goto-btn"></a>
+              <a href="javascript:void(0)" className="recipe__goto-btn"></a>
             </div>
-            <div className="recipe--info">
+            <div className="recipe__info">
               <h5>{difficulty}</h5>
               <h4>{name}</h4>
               <p>{description}</p>
             </div>
           </div>
-          <span className="recipe--user-name">
+          <span className="recipe__user-name">
             User full name
           </span>
         </div>
@@ -142,7 +142,7 @@ class PopularRecipes extends Component {
     return (
       <section className="popular-recipes">
         <div className="container">
-          <div className="popular-recipes--heading">
+          <div className="popular-recipes__heading">
             <div>
               <h3>Popular</h3>
               <h2>Recipes</h2>
@@ -153,8 +153,8 @@ class PopularRecipes extends Component {
               <div className="badge">Send it now</div>
             </div>
           </div>
-          <div className="popular-recipes--carousel">
-            <div className="popular-recipes--carousel--container" style={containerStyle}>
+          <div className="popular-recipes__carousel">
+            <div className="popular-recipes__carousel__container" style={containerStyle}>
               {renderRecipe}
             </div>
           </div>

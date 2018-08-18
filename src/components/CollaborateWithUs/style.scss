@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
   }
-    .collaborate-with-us--info {
+    .collaborate-with-us__info {
       flex-basis: 50%;
       h2 {
         font-size: 35px;
@@ -34,12 +34,12 @@
         margin-bottom: 20px;
       }
     }
-    .collaborate-with-us--form {
+    .collaborate-with-us__form {
       flex-basis: 50%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      .collaborate-with-us--form--group {
+      .collaborate-with-us__form-group {
         flex-basis: calc(50% - 12px);
         margin-bottom: 15px;
         label {

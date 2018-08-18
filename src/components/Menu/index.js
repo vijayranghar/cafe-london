@@ -84,7 +84,7 @@ class Menu extends Component {
        const dishCategoryName = category
        const dishesName = dishes.map(({name,description,price},index) => {
          return (
-          <li key={index} className="menu--item--description">
+          <li key={index} className="menu__description">
             <h4>{name}</h4>
             <p>{description}</p>
             <span>{price}</span>
@@ -103,7 +103,7 @@ class Menu extends Component {
         <div className="container">
           <h2>Our menu</h2>
           <div className="badge">Know more</div>
-          <div className="menu--item">
+          <div className="menu__item">
             {renderMenu}
           </div>
         </div>
