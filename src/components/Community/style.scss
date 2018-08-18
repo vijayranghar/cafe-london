@@ -26,6 +26,14 @@
           margin-left: 0;
         }
       }
+      .badge {
+        margin-left: 0;
+        & + p {
+          font-size: 22px;
+          line-height: 25px;
+          margin-top: 35px;
+        }
+      }
       .community__recipe-image {
         padding: 15px;
         box-shadow: 0 0 10px 3px #f3f3f3;
@@ -42,9 +50,71 @@
           width: 55px;
         }
       }
+      .community__recipe-info {
+        font-size: 15px;
+        font-family: 'Gill Sans','din_condensedbold',arial;
+        color: $color-scorpion;
+        line-height: 20px;
+      }
+      &:first-child {
+        justify-content: flex-end;
+        .community__tweet {
+          margin-bottom: 90px;
+        }
+      }
+      &:nth-child(2) {
+        justify-content: flex-start;
+        @extend %community-recipe-image;
+        .community__recipe-image > div {
+          background: url('../../assets/images/burger.jpg') no-repeat 100% 100%;
+        }
+      }
+      &:nth-child(3) {
+        margin-top: 85px;
+        @extend %community-recipe-image;
+        .community__recipe-image > div {
+          background: url('../../assets/images/pizza_2.jpg') no-repeat 100% 100%;
+        }
+        .community__recipe-info {
+          margin-top: 90px;
+          margin-bottom: 90px;
+        }
+      }
+      &:last-child {
+        margin-top: 85px;
+        @extend %community-recipe-image;
+        .community__recipe-image > div {
+          background: url('../../assets/images/food.jpeg') no-repeat 100% 100%;
+        }
+      }
     }
     .community__tweet {
       box-shadow: 0 0 10px 3px #f3f3f3;
+      height: 250px;
+      width: 250px;
+      position: relative;
+      .community__tweet-details {
+        padding: 20px 30px 30px;
+        & > span {
+          font-size: 22px;
+          display: inline-block;
+          margin-bottom: 15px;
+          font-family: 'din_condensedbold','Gill Sans',arial;
+        }
+        p {
+          font-family: 'Gill Sans','din_condensedbold',arial;
+          color: $color-scorpion;
+          line-height: 20px;
+        }
+      }
+      .community__tweet-count {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        .fa-heart {
+          margin-left: 15px;
+        }
+      }
     }
   }
 }

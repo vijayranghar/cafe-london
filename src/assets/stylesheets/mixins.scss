@@ -27,3 +27,15 @@
     right: -15px;
   }
 }
+
+%community-recipe-image {
+  .community__recipe-image {
+    height: 250px;
+    width: 250px;
+    & > div {
+      height: 100%;
+      background-size: contain;
+      background: url('../../assets/images/pizza_2.jpg') no-repeat 100% 100%;
+    }
+  }
+}
